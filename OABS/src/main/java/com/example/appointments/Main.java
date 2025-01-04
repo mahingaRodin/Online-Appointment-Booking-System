@@ -27,7 +27,7 @@ public class Main {
 
             //fetching a user by email
             User fetchedUser = userDAO.getUserByEmail("mahingarodin@gmail.com");
-            System.out.println("Fetched user: "+ fetchedUser.getName() + "Email: " + fetchedUser.getEmail());
+            System.out.println("Fetched user: "+ fetchedUser.getName() + " Email: " + fetchedUser.getEmail());
 
             //testing appointmentDAO
             AppointmentDAO appointmentDAO = new AppointmentDAO();
