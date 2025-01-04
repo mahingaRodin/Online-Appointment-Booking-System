@@ -20,7 +20,7 @@ public class Main {
             newUser.setName("Mahinga Rodin");
             newUser.setEmail("mahingarodin@gmail.com");
             newUser.setPassword("admin123");
-            newUser.setRole("ADMIN");
+            newUser.setRole("USER");
 
             boolean isRegistered = userDAO.registerUser(newUser);
             System.out.println("User registration successful " + isRegistered);
