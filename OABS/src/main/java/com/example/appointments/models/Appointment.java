@@ -2,6 +2,8 @@ package com.example.appointments.models;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Appointment {
     private int id;
@@ -10,6 +12,9 @@ public class Appointment {
     private Date date;
     private Time time;
     private String status; // "PENDING", "APPROVED", "COMPLETED"
+
+    public Appointment(int id, int userId, LocalDate date, LocalTime time, String status) {
+    }
 
     // Getters and setters
     public int getId() { return id; }
@@ -21,10 +26,10 @@ public class Appointment {
     public String getService() { return service; }
     public void setService(String service) { this.service = service; }
 
-    public Date getDate() { return date; }
+    public String getDate() { return date; }
     public void setDate(Date date) { this.date = date; }
 
-    public Time getTime() { return time; }
+    public String getTime() { return time; }
     public void setTime(Time time) { this.time = time; }
 
     public String getStatus() { return status; }

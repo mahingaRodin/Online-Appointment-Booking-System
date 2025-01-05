@@ -7,6 +7,13 @@ public class User {
     private String password;
     private String role;
 
+    public User(int id, String name, String email, String password, String role) {
+    }
+
+    public User() {
+
+    }
+
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
