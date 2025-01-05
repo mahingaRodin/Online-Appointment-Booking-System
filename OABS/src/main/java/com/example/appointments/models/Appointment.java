@@ -26,10 +26,10 @@ public class Appointment {
     public String getService() { return service; }
     public void setService(String service) { this.service = service; }
 
-    public String getDate() { return date; }
+    public Date getDate() { return date; }
     public void setDate(Date date) { this.date = date; }
 
-    public String getTime() { return time; }
+    public Time getTime() { return time; }
     public void setTime(Time time) { this.time = time; }
 
     public String getStatus() { return status; }
