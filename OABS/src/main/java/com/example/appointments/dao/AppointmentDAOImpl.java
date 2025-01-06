@@ -18,8 +18,8 @@ public class AppointmentDAOImpl implements AppointmentDAO {
         try (Connection connection = DatabaseUtils.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, appointment.getUserId());
-            statement.setDate(2, java.sql.Date.valueOf(appointment.getDate()));
-            statement.setTime(3, java.sql.Time.valueOf(appointment.getTime()));
+            statement.setDate(2, java.sql.Date.valueOf(appointment.getDate().toLocalDate()));
+            statement.setTime(3, java.sql.Time.valueOf(appointment.getTime().toLocalTime()));
             statement.setString(4, appointment.getStatus());
             return statement.executeUpdate() > 0;
         }
