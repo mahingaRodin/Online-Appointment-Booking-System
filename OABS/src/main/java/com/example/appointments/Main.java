@@ -26,9 +26,9 @@ public class Main {
             Context context = tomcat.addWebapp(contextPath, baseDir);
 
             // Add individual servlets without unnecessary casting
-            context.(context, "HealthCheckServlet", new HealthCheckServlet());
-            tomcat.addServlet(context, "UserServlet", new RegisterUserServlet());
-            tomcat.addServlet(context, "AppointmentServlet", new GetAppointmentServlet());
+            tomcat.addServlet(context, "HealthCheckServlet", (Servlet) new HealthCheckServlet());
+            tomcat.addServlet(context, "UserServlet", (Servlet) new RegisterUserServlet());
+            tomcat.addServlet(context, "AppointmentServlet", (Servlet) new GetAppointmentServlet());
 
             // Map servlets to their respective URL patterns
             context.addServletMappingDecoded("/healthcheck", "HealthCheckServlet");
