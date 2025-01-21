@@ -3,11 +3,11 @@ package com.example.appointments.servlets;
 import com.example.appointments.dao.AppointmentDAO;
 import com.example.appointments.dao.AppointmentDAOImpl;
 import com.example.appointments.models.Appointment;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
