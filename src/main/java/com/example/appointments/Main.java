@@ -16,7 +16,7 @@ public class Main {
             Tomcat tomcat = new Tomcat();
 
             // Set the port number
-            tomcat.setPort(8080);
+            tomcat.setPort(8081);
 
             // Define the context path and base directory for the application
             String contextPath = "/oabs"; // Change this to your desired context path
@@ -26,9 +26,9 @@ public class Main {
             Context context = tomcat.addWebapp(contextPath, baseDir);
 
             // Add individual servlets without unnecessary casting
-            tomcat.addServlet(context, "HealthCheckServlet", (Servlet) new HealthCheckServlet());
-            tomcat.addServlet(context, "UserServlet", (Servlet) new RegisterUserServlet());
-            tomcat.addServlet(context, "AppointmentServlet", (Servlet) new GetAppointmentServlet());
+            Tomcat.addServlet(context, "HealthCheckServlet", (Servlet) new HealthCheckServlet());
+            Tomcat.addServlet(context, "UserServlet", (Servlet) new RegisterUserServlet());
+            Tomcat.addServlet(context, "AppointmentServlet", (Servlet) new GetAppointmentServlet());
 
             // Map servlets to their respective URL patterns
             context.addServletMappingDecoded("/healthcheck", "HealthCheckServlet");
@@ -37,7 +37,7 @@ public class Main {
 
             // Start Tomcat
             tomcat.start();
-            System.out.println("Tomcat started on http://localhost:8080" + contextPath);
+            System.out.println("Tomcat started on http://localhost:8081" + contextPath);
             tomcat.getServer().await();
 
         } catch (Exception e) {
